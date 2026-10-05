@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Cita - Migraciones Perú</title>
+    <link rel="stylesheet" href="actualizar.css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenedor-logo">
+            <img src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/svg/pe.svg" alt="Bandera del Perú" class="logo-gobierno">
+            <h1>MIGRACIONES <span>Perú</span></h1>
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="consulta.html" class="enlace-menu">&larr; Volver a Mis Citas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion-formulario">
+            <h2>Modificar Registro de Cita</h2>
+            <p>Edite los campos necesarios para actualizar la información de su cita reservada.</p>
+
+            <form id="formActualizar" class="formulario">
+                <!-- Campo oculto para identificar el índice del registro -->
+                <input type="hidden" id="cita-index">
+
+                <div class="campo">
+                    <label for="nombres">Nombres completados:</label>
+                    <input type="text" id="nombres" required class="control-entrada" placeholder="Ingrese sus nombres">
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos completados:</label>
+                    <input type="text" id="apellidos" required class="control-entrada" placeholder="Ingrese sus apellidos">
+                </div>
+
+                <div class="campo">
+                    <label for="sede">Sede Migratoria:</label>
+                    <select id="sede" required class="control-entrada">
+                        <option value="Sede Central - Breña">Sede Central - Breña (Av. España 734)</option>
+                        <option value="MAC Lima Este">MAC Lima Este - Jockey Plaza</option>
+                        <option value="MAC Lima Norte">MAC Lima Norte - Plaza Norte</option>
+                        <option value="MAC Callao">MAC Callao - Mall Aventura Plaza</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha-cita">Nueva Fecha de Cita:</label>
+                    <input type="date" id="fecha-cita" required class="control-entrada">
+                </div>
+
+                <div class="campo">
+                    <label for="horario-cita">Nuevo Horario Atentido:</label>
+                    <select id="horario-cita" required class="control-entrada">
+                        <option value="08:00 AM - 10:00 AM">08:00 AM - 10:00 AM</option>
+                        <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                        <option value="12:00 PM - 02:00 PM">12:00 PM - 02:00 PM</option>
+                        <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="boton-enviar">Guardar Cambios</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Superintendencia Nacional de Migraciones - Perú.</p>
+    </footer>
+
+    <script src="actualizar.js"></script>
+</body>
+</html>

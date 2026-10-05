@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Migraciones Perú</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenedor-logo">
+            <img src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/svg/pe.svg" alt="Bandera del Perú" class="logo-gobierno">
+            <h1>MIGRACIONES <span>Perú</span></h1>
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html" class="enlace-menu">&larr; Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion-formulario">
+            <h2>Acceso a la Plataforma Virtual</h2>
+            <p>Ingrese sus credenciales para gestionar sus citas y trámites migratorios.</p>
+
+            <!-- FORMULARIO LOGIN -->
+            <form id="formLogin" class="formulario">
+                <div class="campo">
+                    <label for="login-email">Correo Electrónico:</label>
+                    <input type="email" id="login-email" placeholder="ejemplo@correo.com" required class="control-entrada">
+                </div>
+
+                <div class="campo">
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" placeholder="********" required class="control-entrada">
+                </div>
+
+                <button type="submit" class="boton-enviar">Iniciar Sesión</button>
+            </form>
+
+            <hr class="divisor">
+
+            <h2>¿No tienes una cuenta? Regístrate</h2>
+            
+            <!-- FORMULARIO REGISTRO USUARIO -->
+            <form id="formRegistroUsuario" class="formulario">
+                <div class="campo">
+                    <label for="reg-email">Correo Electrónico:</label>
+                    <input type="email" id="reg-email" placeholder="ejemplo@correo.com" required class="control-entrada">
+                </div>
+
+                <div class="campo">
+                    <label for="reg-password">Contraseña:</label>
+                    <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" required class="control-entrada">
+                </div>
+
+                <div class="campo">
+                    <label for="reg-rol">Tipo de Usuario:</label>
+                    <select id="reg-rol" required class="control-entrada">
+                        <option value="usuario">Usuario Ciudadano</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="boton-enviar">Crear Cuenta</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Superintendencia Nacional de Migraciones - Perú.</p>
+    </footer>
+
+    <!-- Importante: type="module" permite utilizar "import { sql } from './neon-config.js';" en login.js -->
+    <script type="module" src="login.js"></script>
+
+</body>
+</html>

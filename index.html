@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superintendencia Nacional de Migraciones - Perú</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenedor-logo">
+            <img src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/svg/pe.svg" alt="Escudo / Bandera del Perú" class="logo-gobierno">
+            <h1>MIGRACIONES <span>Perú</span></h1>
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html" class="enlace-menu activo">Inicio</a></li>
+                <li id="menu-login"><a href="login.html" class="enlace-menu">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="boton-menu-cita">Agendar Cita Pasaporte</a></li>
+                <li id="menu-tramites" hidden><a href="consulta.html" class="enlace-menu">Mis Trámites</a></li>
+                <li id="menu-panel" hidden><a href="panel.html" class="enlace-menu">Panel Admin</a></li>
+                <li id="menu-salir" hidden><a href="#" id="enlaceSalir" class="enlace-menu">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="seccion-hero">
+        <div class="contenido-hero">
+            <div class="hero-texto">
+                <h2>Superintendencia Nacional de Migraciones</h2>
+                <p>Plataforma oficial informativa para la expedición de <strong>Pasaportes Electrónicos</strong>, gestión de <strong>Calidades Migratorias</strong> y control de fronteras en el territorio peruano.</p>
+                <p>
+                    <a href="registro.html" class="boton-accion">Reservar Cita para Pasaporte &rarr;</a>
+                </p>
+            </div>
+            <figure class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Pasaporte y documentos de viaje">
+                <figcaption class="insignia-hero">✔ Atención oficial y gratuita</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <main class="contenedor-principal">
+
+        <!-- MARCO INSTITUCIONAL -->
+        <section id="institucion" class="seccion-bloque">
+            <h2>Marco Institucional y Competencias</h2>
+            <div class="bloque-doble">
+                <div>
+                    <p>Conforme al <em>Decreto Legislativo N.º 1130</em> y al <em>Decreto Legislativo N.º 1350 (Ley de Migraciones)</em>, la Superintendencia Nacional de Migraciones regula el ingreso, permanencia y salida de personas del país, garantizando la seguridad nacional y la protección de derechos fundamentales.</p>
+                    <h3>Funciones de Control y Registro:</h3>
+                    <ul>
+                        <li>Expedición del Pasaporte Electrónico con chip biométrico ICAO.</li>
+                        <li>Otorgamiento del Carné de Extranjería y Carné de Permiso Temporal de Permanencia (CPP).</li>
+                        <li>Administración del Registro de Información Migratoria (RIM).</li>
+                        <li>Fiscalización migratoria en los Puestos de Control Fronterizo (PCF).</li>
+                    </ul>
+                </div>
+                <figure class="figura-lateral">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80" alt="Control aeroportuario y de fronteras">
+                </figure>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="seccion-bloque">
+            <h2>Servicios y Trámites Principales</h2>
+
+            <div class="rejilla-tarjetas">
+
+                <article class="tarjeta-servicio">
+                    <figure class="contenedor-figura">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80" alt="Pasaporte y documentos de viaje" class="imagen-tarjeta">
+                        </picture>
+                        <figcaption class="pie-figura">Documento de viaje oficial ICAO</figcaption>
+                    </figure>
+                    <h3>Pasaporte Electrónico Ordinario</h3>
+                    <p>Documento de viaje con vigencia de <strong>10 años</strong> para mayores de 18 años. Código de pago Banco de la Nación: <strong>01810</strong>.</p>
+                    <p><strong>Costo oficial:</strong> S/ 120.90 en Págalo.pe o agencias.</p>
+                    <a href="registro.html" class="enlace-tarjeta">Solicitar Cita Virtual &raquo;</a>
+                </article>
+
+                <article class="tarjeta-servicio">
+                    <figure class="contenedor-figura">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Identificación y documentos legales" class="imagen-tarjeta">
+                        <figcaption class="pie-figura">Acreditación de residencia legal</figcaption>
+                    </figure>
+                    <h3>Carné de Extranjería (CE)</h3>
+                    <p>Acredita la residencia legal de personas extranjeras en el Perú. Permite trabajar, estudiar y suscribir contratos en el país.</p>
+                    <p><strong>Costo oficial:</strong> S/ 49.90 (Código BN: 07561).</p>
+                    <a href="#requisitos" class="enlace-tarjeta">Ver detalle de tasas &raquo;</a>
+                </article>
+
+                <article class="tarjeta-servicio">
+                    <figure class="contenedor-figura">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Control aeroportuario y de fronteras" class="imagen-tarjeta">
+                        <figcaption class="pie-figura">Registro en puestos fronterizos</figcaption>
+                    </figure>
+                    <h3>Certificado de Movimiento Migratorio</h3>
+                    <p>Documento oficial que registra las entradas y salidas internacionales realizadas por los puestos de control autorizados.</p>
+                    <p><strong>Costo oficial:</strong> S/ 20.20 (Código BN: 07563).</p>
+                    <a href="#requisitos" class="enlace-tarjeta">Ver detalle de tasas &raquo;</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- REQUISITOS -->
+        <section id="requisitos" class="seccion-bloque">
+            <h2>Requisitos por Trámite</h2>
+            <div class="acordeon">
+
+                <details class="item-acordeon">
+                    <summary class="titulo-acordeon">Requisitos para Pasaporte Electrónico</summary>
+                    <div class="contenido-acordeon">
+                        <ul>
+                            <li>DNI vigente en buen estado y sin multas electorales.</li>
+                            <li>Comprobante de pago del Banco de la Nación o Págalo.pe (S/ 120.90 - Código 01810).</li>
+                            <li>Cita en línea programada e impresa.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="item-acordeon">
+                    <summary class="titulo-acordeon">Requisitos para Prórroga de Residencia / Calidad Migratoria</summary>
+                    <div class="contenido-acordeon">
+                        <ul>
+                            <li>Carné de Extranjería vigente.</li>
+                            <li>Comprobante de pago de la tasa correspondiente según la calidad migratoria.</li>
+                            <li>Documentación probatoria de la actividad realizada en el país (Trabajo, Estudio, Familiar).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="item-acordeon">
+                    <summary class="titulo-acordeon">Requisitos para Certificado de Movimiento Migratorio</summary>
+                    <div class="contenido-acordeon">
+                        <ul>
+                            <li>DNI o Carné de Extranjería del solicitante.</li>
+                            <li>Pago de la tasa de S/ 20.20 en el Banco de la Nación (Código 07563).</li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- TABLA DE TASAS -->
+        <section class="seccion-bloque">
+            <h2>Resumen Didáctico de Tasas y Códigos de Pago (BN)</h2>
+            <p>Consulte la tabla de códigos oficiales antes de acudir al Banco de la Nación o ingresar a Págalo.pe:</p>
+
+            <table class="tabla-tasas">
+                <thead>
+                    <tr>
+                        <th>Servicio Migratorio</th>
+                        <th>Código de Pago (BN)</th>
+                        <th>Monto (PEN)</th>
+                        <th>Vigencia del Documento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pasaporte Electrónico (Mayores de edad)</td><td>01810</td><td>S/ 120.90</td><td>10 años</td></tr>
+                    <tr><td>Pasaporte Electrónico (Menores de edad)</td><td>01810</td><td>S/ 120.90</td><td>5 años</td></tr>
+                    <tr><td>Duplicado de Carné de Extranjería</td><td>07561</td><td>S/ 20.20</td><td>Según calidad migratoria</td></tr>
+                    <tr><td>Certificado de Movimiento Migratorio</td><td>07563</td><td>S/ 20.20</td><td>Indefinida</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- AVISO -->
+        <aside class="bloque-aviso">
+            <h3>⚠️ Comunicado Oficial a los Usuarios</h3>
+            <p>Se recuerda que <strong>no existen tramitadores autorizados</strong>. Las citas se otorgan de forma personal y gratuita a través del sistema oficial.</p>
+            <p>Para verificar la disponibilidad de turnos o agendar tu atención presencial, ingresa directamente a: <a href="registro.html">Módulo de Atención de Citas</a>.</p>
+        </aside>
+
+    </main>
+
+    <!-- BANDA FINAL CON IMAGEN -->
+    <section class="banda-cta">
+        <div class="contenido-banda">
+            <h2>¿Listo para viajar?</h2>
+            <p>Reserve su cita de pasaporte en minutos, sin intermediarios.</p>
+            <a href="registro.html" class="boton-accion">Agendar mi Cita &rarr;</a>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Superintendencia Nacional de Migraciones - Sede Central: Av. España 734, Breña, Lima, Perú.</p>
+        <p>Central Telefónica: (01) 200-1000 | Horario de atención: Lunes a Viernes de 08:00 a 17:00 h.</p>
+        <p><a href="#inicio" class="enlace-arriba">&uarr; Volver al inicio de la página</a></p>
+    </footer>
+
+    <!-- MENÚ SEGÚN SESIÓN -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sesion = JSON.parse(localStorage.getItem('usuario_sesion'));
+
+            if (!sesion) {
+                return;
+            }
+
+            document.getElementById('menu-login').hidden = true;
+            document.getElementById('menu-tramites').hidden = false;
+            document.getElementById('menu-salir').hidden = false;
+
+            if (sesion.rol === 'admin' || sesion.rol === 'empleado') {
+                document.getElementById('menu-panel').hidden = false;
+            }
+
+            document.getElementById('enlaceSalir').addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('usuario_sesion');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Citas Migraciones</title>
+    <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <span class="flag">🇵🇪</span>
+            <h1>MIGRACIONES <span>Panel Admin</span></h1>
+        </div>
+        <div class="user-info">
+            <span id="user-role-display">Cargando sesión...</span>
+            <button class="btn-logout" id="btnCerrarSesion">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="panel-header">
+            <h2>Gestión General de Citas (CRUD)</h2>
+            <p>Administración general de usuarios y solicitudes registradas en Neon DB.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Solicitante</th>
+                        <th>Documento</th>
+                        <th>Sede</th>
+                        <th>Fecha Cita</th>
+                        <th>Horario</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCitasBody">
+                    <tr>
+                        <td colspan="8" class="text-center">Cargando citas desde la base de datos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- VENTANA DE EDICIÓN -->
+    <div id="modalEditar" class="modal-fondo">
+        <div class="modal-caja">
+            <h3>Editar cita <span id="modal-id"></span></h3>
+            <p id="modal-aviso" class="modal-aviso"></p>
+
+            <form id="formEditarCita">
+                <input type="hidden" id="edit-id">
+
+                <div class="modal-grid">
+                    <div class="modal-campo">
+                        <label for="edit-nombres">Nombres:</label>
+                        <input type="text" id="edit-nombres" data-admin required>
+                    </div>
+
+                    <div class="modal-campo">
+                        <label for="edit-apellidos">Apellidos:</label>
+                        <input type="text" id="edit-apellidos" data-admin required>
+                    </div>
+
+                    <div class="modal-campo">
+                        <label for="edit-tipo-doc">Tipo de documento:</label>
+                        <select id="edit-tipo-doc" data-admin required>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">Carné de Extranjería</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-campo">
+                        <label for="edit-documento">Número de documento:</label>
+                        <input type="text" id="edit-documento" maxlength="12" data-admin required>
+                    </div>
+
+                    <div class="modal-campo modal-ancho">
+                        <label for="edit-correo">Correo del titular:</label>
+                        <input type="email" id="edit-correo" data-admin required>
+                    </div>
+
+                    <div class="modal-campo modal-ancho">
+                        <label for="edit-sede">Sede:</label>
+                        <select id="edit-sede" data-admin required>
+                            <option value="Sede Central - Breña">Sede Central - Breña (Av. España 734)</option>
+                            <option value="MAC Lima Este">MAC Lima Este - Jockey Plaza</option>
+                            <option value="MAC Lima Norte">MAC Lima Norte - Plaza Norte</option>
+                            <option value="MAC Callao">MAC Callao - Mall Aventura Plaza</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-campo">
+                        <label for="edit-fecha">Fecha de la cita:</label>
+                        <input type="date" id="edit-fecha" data-admin required>
+                    </div>
+
+                    <div class="modal-campo">
+                        <label for="edit-horario">Horario:</label>
+                        <select id="edit-horario" data-admin required>
+                            <option value="08:00 AM - 10:00 AM">08:00 AM - 10:00 AM</option>
+                            <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                            <option value="12:00 PM - 02:00 PM">12:00 PM - 02:00 PM</option>
+                            <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-campo modal-ancho">
+                        <label for="edit-estado">Estado:</label>
+                        <select id="edit-estado" required>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Atendido">Atendido</option>
+                            <option value="Cancelado">Cancelado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-acciones">
+                    <button type="button" id="btnCancelarEdicion" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Superintendencia Nacional de Migraciones - Perú.</p>
+    </footer>
+
+    <script type="module" src="panel.js"></script>
+</body>
+</html>
