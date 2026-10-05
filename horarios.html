@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Personal - Migraciones Perú</title>
+    <link rel="stylesheet" href="horarios.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <span class="flag">🇵🇪</span>
+            <h1>MIGRACIONES <span>Horarios de Personal</span></h1>
+        </div>
+        <div class="user-info">
+            <span id="user-role-display">Cargando sesión...</span>
+            <a href="panel.html" class="btn-volver">&larr; Volver al Panel</a>
+            <button class="btn-logout" id="btnCerrarSesion">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="panel-header">
+            <h2>Turnos del Personal</h2>
+            <p>Cada empleado solo puede gestionar citas durante su turno. El turno activo ahora se resalta.</p>
+        </div>
+
+        <div id="rejillaTurnos" class="rejilla-turnos">
+            <p class="text-center">Cargando turnos...</p>
+        </div>
+
+        <div class="panel-header">
+            <h2>Asignar turno a cada empleado</h2>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empleado</th>
+                        <th>Turno asignado</th>
+                        <th>Estado ahora</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEmpleadosBody">
+                    <tr>
+                        <td colspan="4" class="text-center">Cargando empleados desde la base de datos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Superintendencia Nacional de Migraciones - Perú.</p>
+    </footer>
+
+    <script type="module" src="horarios.js"></script>
+</body>
+</html>

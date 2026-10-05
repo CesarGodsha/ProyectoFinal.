@@ -15,6 +15,7 @@
         </div>
         <div class="user-info">
             <span id="user-role-display">Cargando sesión...</span>
+            <a id="enlaceHorarios" href="horarios.html" class="btn-logout" style="text-decoration:none; display:none;">🕒 Horarios del personal</a>
             <button class="btn-logout" id="btnCerrarSesion">Cerrar Sesión</button>
         </div>
     </header>
@@ -132,6 +133,14 @@
     <footer>
         <p>&copy; 2026 Superintendencia Nacional de Migraciones - Perú.</p>
     </footer>
+
+    <!-- Muestra el enlace de horarios solo al administrador -->
+    <script>
+        const sesionPanel = JSON.parse(localStorage.getItem('usuario_sesion'));
+        if (sesionPanel && sesionPanel.rol === 'admin') {
+            document.getElementById('enlaceHorarios').style.display = 'inline-block';
+        }
+    </script>
 
     <script type="module" src="panel.js"></script>
 </body>
